@@ -1,0 +1,25 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+input {
+  padding: 1rem;
+  width: 80%;
+}
+.meaning-opt {
+  padding: 0.5rem;
+  font-weight: medium;
+  font-size: 1.1rem;
+}
+
+.list-inline {
+  list-style: none;
+}
+.list-emoji {
+  display: inline;
+  padding: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+
+}
