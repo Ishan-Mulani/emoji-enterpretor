@@ -1,7 +1,7 @@
 import "./styles.css";
 import React, { useState } from "react";
 
-const emojiDictionay = {
+const emojiDictionary = {
   "😀": "Grinning Face",
   "😃": "Grinning Face with Big Eyes",
   "😄": "Grinning Face with Smiling Eyes",
@@ -20,14 +20,15 @@ const emojiDictionay = {
   "🤩": "Star-Struck"
 };
 
-var emojiWeKnow = Object.keys(emojiDictionay) 
+var emojiWeKnow = Object.keys(emojiDictionary)
+
 
 export default function App() {
   var [meaning, setMeaning] = useState("");
 
   function onChangeHandler(event) {
     var userInput = event.target.value;
-    var meaning = emojiDictionay[userInput];
+    var meaning = emojiDictionary[userInput];
 
     if (meaning === undefined) {
       meaning = "This emoji is not available";
@@ -37,15 +38,17 @@ export default function App() {
   }
 
 function emojiClickHandler(emoji){
-  var meaning = emojiDictionay[emoji]
+  var meaning = emojiDictionary[emoji]
   setMeaning(meaning)
 }
+
 
   return (
     <div className="App">
       <h1 style={{ color: "skyblue" }}>Emoji Interpretor</h1>
       <input placeholder="Enter the emoji" onChange={onChangeHandler}></input>
       <div className="meaning-opt"> {meaning} </div>
+
 
       <h4>Emojis we know</h4>
       <ul className="list-inline">
